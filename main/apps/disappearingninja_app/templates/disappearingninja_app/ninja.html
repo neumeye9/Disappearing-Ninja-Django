@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninjas</title>
+    {% load staticfiles %}
+</head>
+<body>
+    {% load staticfiles %}
+    {% if ninja_name == "all" %}
+        <h1>All the Ninjas!</h1>
+      <img src="{% static 'disappearingninja_app/img/tmnt.png' %}" alt="group">
+    {% elif ninja_name == 'purple' %}
+        <h1>Donatello</h1>
+        <img src="{% static 'disappearingninja_app/img/turtles/donatello.jpg'%}" alt="Donatello">
+    {% elif ninja_name == 'blue' %}
+        <h1>Leonardo</h1>
+        <img src="{% static 'disappearingninja_app/img/turtles/leonardo.jpg'%}" alt="Leonardo">
+    {% elif ninja_name == 'orange' %}
+        <h1>Michelangelo</h1>
+        <img src="{% static 'disappearingninja_app/img/turtles/michelangelo.jpg'%}" alt="Michelangelo">
+    {% elif ninja_name == 'red' %}
+        <h1>Raphael</h1>
+        <img src="{% static 'disappearingninja_app/img/turtles/raphael.jpg'%}" alt="Raphael">
+    {% else %}
+        <h1>Get out of here!</h1>
+        <img src="{% static 'disappearingninja_app/img/turtles/notapril.jpg'%}" alt="April">
+    {% endif %}
+     
+</body>
+</html>
